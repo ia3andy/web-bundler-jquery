@@ -12,10 +12,11 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
-    <quarkus.platform.version>3.2.4.Final</quarkus.platform.version>
+    <quarkus.platform.version>3.3.2</quarkus.platform.version>
     <skipITs>true</skipITs>
     <surefire-plugin.version>3.0.0</surefire-plugin.version>
-    <quarkus-web-bundler.version>1.1.1</quarkus-web-bundler.version>
+    <quarkus-web-bundler.version>1.1.2</quarkus-web-bundler.version>
+    <quarkus-qute-server-pages.version>2.1.0.Final</quarkus-qute-server-pages.version>
   </properties>
   <repositories>
     <repository>
@@ -39,7 +40,7 @@
     <dependency>
       <groupId>io.quarkiverse.quteserverpages</groupId>
       <artifactId>quarkus-qute-server-pages</artifactId>
-      <version>2.0.1.Final</version>
+      <version>${quarkus-qute-server-pages.version}</version>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
@@ -67,17 +68,20 @@
     <dependency>
       <groupId>org.mvnpm</groupId>
       <artifactId>bootstrap</artifactId>
-      <version>5.2.3</version>
+      <version>5.3.1</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.mvnpm</groupId>
       <artifactId>jquery</artifactId>
-      <version>3.7.0</version>
+      <version>3.7.1</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.mvnpm</groupId>
       <artifactId>bootstrap-icons</artifactId>
       <version>1.10.5</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
   <build>
