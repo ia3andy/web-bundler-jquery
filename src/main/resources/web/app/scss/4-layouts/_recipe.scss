@@ -1,0 +1,145 @@
+.recipe {
+  display: flex;
+  margin-bottom: 20px;
+
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+  }
+
+}
+
+.timing-detail {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+
+  .total {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 0.9rem;
+
+    .total {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.sticky-note {
+  justify-self: center;
+  font-family: $sticker-font, $base-font-family;
+}
+
+.sticky-note__inner {
+  min-width: 390px;
+  min-height: 390px;
+  font-size: 1.3rem;
+  outline: none;
+  position: relative;
+
+  @media (max-width: $tablet) {
+    min-width: 300px;
+  }
+
+  margin: 50px 10px 10px;
+  padding: 40px 1em 1em;
+
+  h2 {
+    font-size: 2rem;
+    font-family: $sticker-font, $heading-font-family;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $mobile) {
+      font-size: 1.6rem;
+    }
+
+    span:first-child {
+      flex-grow: 1;
+    }
+
+    span.info {
+      font-weight: normal;
+      font-size: 1.2rem;
+      vertical-align: middle;
+    }
+
+    i {
+      margin-left: 5px;
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ul li:before {
+    content: '✔️️';
+    margin-right: 10px;
+  }
+
+  li p {
+    margin: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border-width: 20px 20px 20px 20px;
+    border-style: solid;
+  }
+
+  &.variant-one {
+    background-color: $sticker1;
+    grid-area: sticker1;
+    box-shadow: -9px 0px 10px -5px rgba(0, 0, 0, 0.42);
+
+    &::before {
+      background-color: rgba(108, 212, 255, 0.6);
+      width: 120px;
+      height: 35px;
+      left: 50%;
+      top: -15px;
+      transform: translateX(-50%) rotate(3deg);
+    }
+
+    &::after {
+      right: 0;
+      border-top-color: $sticker1-fold;
+      border-left-color: $sticker1-fold;
+      border-bottom-color: var(--background-color);
+      border-right-color: var(--background-color);
+    }
+  }
+
+  &.variant-two {
+    background-color: $sticker2;
+    grid-area: sticker2;
+    box-shadow: -9px 0px 10px -5px rgba(0, 0, 0, 0.42);
+
+    &::before {
+      background-color: rgba(250, 227, 227, 0.8);
+      height: 70px;
+      width: 50px;
+      left: 50%;
+      top: -30px;
+      transform: rotate(-3deg) translateX(-50%);
+    }
+
+    &::after {
+      right: 0;
+      border-top-color: $sticker2-fold;
+      border-left-color: $sticker2-fold;
+      border-bottom-color: var(--background-color);
+      border-right-color: var(--background-color);
+    }
+  }
+}

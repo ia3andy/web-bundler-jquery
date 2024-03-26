@@ -1,0 +1,106 @@
+.google-reviews {
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobile) {
+        .reviews {
+            position: relative;
+            left: calc(-50vw + 50%);
+            width: 100vw;
+        }
+    }
+    .glide__track {
+        border: 1px solid var(--border-color);
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+
+    .review-total {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        .review-rating {
+            font-weight: bold;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: underline;
+        }
+    }
+
+    .review {
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        padding: 5px 0;
+        text-align: center;
+        border-radius: 10px;
+
+        .review-author{
+            margin-bottom: 10px;
+            img {
+                height: 50px;
+            }
+        } 
+    }
+
+
+
+    .review .review-author .author-name {
+        text-transform: capitalize;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .review-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+
+        img {
+            height: 20px;
+        }
+    }
+
+    .review .review-date {
+        opacity: .6;
+        display: block;
+        margin-right: 5px;
+    }
+
+    .review p {
+        text-align: center;
+        font-size: 1rem;
+        min-width: 0;
+        flex-grow: 1;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+
+    .review-stars {
+        color: #eb6e00;
+        /* Google's Star Orange in Nov 2017 */
+        font-size: 1.4em;
+        font-style: normal;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .review-stars .star-empty {
+        color: #c6c6c6;
+    }
+
+}
