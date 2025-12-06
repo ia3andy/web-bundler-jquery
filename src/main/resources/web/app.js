@@ -1,6 +1,5 @@
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import $ from 'jquery';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function endCountdown() {
     $.get('/hello', (data) => {
